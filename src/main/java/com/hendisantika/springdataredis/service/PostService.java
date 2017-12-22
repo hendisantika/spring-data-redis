@@ -50,6 +50,14 @@ public class PostService {
         posts = posts.stream().filter(p -> !p.getId().equals(postID)).collect(Collectors.toList());
     }
 
+    public List<Post> getAllPost() {
+        List<Post> result = posts.stream()                // convert list to stream
+                .collect(Collectors.toList());            // collect the output and convert streams to a List
+
+        return result;                //output : spring, node
+
+    }
+
 
     /**
      * Load post content from DB *Long running method
