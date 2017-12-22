@@ -32,6 +32,14 @@ public class PostController {
     @Autowired
     private PostService postService;
 
+    //    @Cacheable(value = "posts", key = "#ids", unless = "#result.shares < 500")
+    @GetMapping
+    public List<Post> getAllPosts() {
+        log.info("get All posts {}");
+        return postService.getAllPost();
+    }
+
+
     @Cacheable(value = "post-single", key = "#id", unless = "#result.shares < 500")
     @GetMapping("/{id}")
     public Post getPostByID(@PathVariable String id) throws PostNotFoundException {
