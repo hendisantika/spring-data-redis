@@ -32,7 +32,7 @@ public class PostController {
     @Autowired
     private PostService postService;
 
-    //    @Cacheable(value = "posts", key = "#ids", unless = "#result.shares < 500")
+    @Cacheable(value = "posts", key = "#ids", unless = "#result.shares < 500")
     @GetMapping
     public List<Post> getAllPosts() {
         log.info("get All posts {}");
