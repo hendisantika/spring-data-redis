@@ -35,7 +35,7 @@ public class PostController {
     @Cacheable(value = "posts", key = "#ids", unless = "#result.shares < 500")
     @GetMapping
     public List<Post> getAllPosts() {
-        log.info("get All posts {}");
+        log.info("get All posts {}", postService.getAllPost());
         return postService.getAllPost();
     }
 
