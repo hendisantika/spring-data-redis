@@ -3,9 +3,9 @@ package com.hendisantika.springdataredis.service;
 import com.hendisantika.springdataredis.exception.PostNotFoundException;
 import com.hendisantika.springdataredis.model.Author;
 import com.hendisantika.springdataredis.model.Post;
+import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
