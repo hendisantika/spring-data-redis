@@ -3,3 +3,240 @@
 #### This is an example how to use Redis in Spring Boot Data Redis
 
 Run this project by this command : `mvn clean spring-boot:run`
+
+### Get All Posts
+
+GET http://localhost:8080/posts
+
+Response:
+
+```
+[
+  {
+    "id": "IDX001",
+    "title": "Cyberpunk is near",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 555,
+    "author": {
+      "name": "Anna"
+    }
+  },
+  {
+    "id": "IDX002",
+    "title": "Welcome aboard of the hype train",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 55,
+    "author": {
+      "name": "Josh"
+    }
+  },
+  {
+    "id": "IDX003",
+    "title": "How to improve programming skills ",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 555,
+    "author": {
+      "name": "Kobe"
+    }
+  },
+  {
+    "id": "IDX004",
+    "title": "Top exercises for IT people",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 55,
+    "author": {
+      "name": "Leo"
+    }
+  },
+  {
+    "id": "IDX005",
+    "title": "Case study of 75 years project",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 55,
+    "author": {
+      "name": "Tom"
+    }
+  },
+  {
+    "id": "IDX006",
+    "title": "Machine Learning",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 255,
+    "author": {
+      "name": "Alexa"
+    }
+  },
+  {
+    "id": "IDX007",
+    "title": "Memory leaks, how to find them ",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 55,
+    "author": {
+      "name": "Frank"
+    }
+  },
+  {
+    "id": "IDX008",
+    "title": "Robots builds robots",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 155,
+    "author": {
+      "name": "Milagros"
+    }
+  },
+  {
+    "id": "IDX009",
+    "title": "Quantum algorithms, from the scratch",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 455,
+    "author": {
+      "name": "Sarah"
+    }
+  },
+  {
+    "id": "IDX010",
+    "title": "Coding, coding, coding",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 255,
+    "author": {
+      "name": "Adam"
+    }
+  }
+]
+```
+
+### Get Single Post
+
+GET http://localhost:8080/posts/IDX010
+
+```
+{
+  "id": "IDX010",
+  "title": "Coding, coding, coding",
+  "description": "Description",
+  "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+  "shares": 255,
+  "author": {
+    "name": "Adam"
+  }
+}
+```
+
+### Get Top Post
+
+GET http://localhost:8080/posts/top
+
+```
+[
+  {
+    "id": "IDX001",
+    "title": "Cyberpunk is near",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 555,
+    "author": {
+      "name": "Anna"
+    }
+  },
+  {
+    "id": "IDX002",
+    "title": "Welcome aboard of the hype train",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 55,
+    "author": {
+      "name": "Josh"
+    }
+  },
+  {
+    "id": "IDX003",
+    "title": "How to improve programming skills ",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 555,
+    "author": {
+      "name": "Kobe"
+    }
+  },
+  {
+    "id": "IDX004",
+    "title": "Top exercises for IT people",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 55,
+    "author": {
+      "name": "Leo"
+    }
+  },
+  {
+    "id": "IDX005",
+    "title": "Case study of 75 years project",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 55,
+    "author": {
+      "name": "Tom"
+    }
+  },
+  {
+    "id": "IDX006",
+    "title": "Machine Learning",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 255,
+    "author": {
+      "name": "Alexa"
+    }
+  },
+  {
+    "id": "IDX007",
+    "title": "Memory leaks, how to find them ",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 55,
+    "author": {
+      "name": "Frank"
+    }
+  },
+  {
+    "id": "IDX008",
+    "title": "Robots builds robots",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 155,
+    "author": {
+      "name": "Milagros"
+    }
+  },
+  {
+    "id": "IDX009",
+    "title": "Quantum algorithms, from the scratch",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 455,
+    "author": {
+      "name": "Sarah"
+    }
+  },
+  {
+    "id": "IDX010",
+    "title": "Coding, coding, coding",
+    "description": "Description",
+    "image": "https://random-cdn.posts/images/xvn84934fnls.jpg",
+    "shares": 255,
+    "author": {
+      "name": "Adam"
+    }
+  }
+]
+```
